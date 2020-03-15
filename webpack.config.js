@@ -9,7 +9,7 @@ module.exports = {
       filename: '[name].js'
     },
     devServer: {
-       port: 8080
+       port: 3000
     },
     module: {
       rules: [
