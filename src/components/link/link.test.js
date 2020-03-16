@@ -25,3 +25,11 @@ test('Link changes the class when hovered', () => {
 test('Fake test', () => {
   expect(true).toBeTruthy();
 });
+
+test('Fake test 2', () => {
+  expect(true).toBeTruthy();
+});
+
+test('Fake test 3', () => {
+  expect(true).toBeTruthy();
+});
