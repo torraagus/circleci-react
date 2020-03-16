@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "watch": "webpack --watch",
-    "start-dev": "npx webpack-dev-server -d --open",
-    "start-prod": "npx webpack-dev-server -p --open",
+    "start": "npx webpack-dev-server -d --open",
     "build": "webpack"
   },
   "keywords": [],
