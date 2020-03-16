@@ -1,4 +1,5 @@
 import React from '../../../node_modules/react';
+import './link.scss';
 
 const STATUS = {
   HOVERED: 'hovered',
