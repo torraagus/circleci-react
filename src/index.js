@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Link from './components/link/link.component';
+//import Link from './components/link/link.component';
+import OuterCounter from './components/outer-counter/outer-counter.component';
 
 class Root extends Component {
   render() {
     return (
-      <Link page="http://www.facebook.com">Go to Facebook</Link>
+      //<Link page="http://www.facebook.com">Go to Facebook</Link>
+      <OuterCounter></OuterCounter>
     )
   }
 }
