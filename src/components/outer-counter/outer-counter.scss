@@ -1,0 +1,46 @@
+.counterName {
+    font-weight: lighter;
+    color: #cccccc;
+}
+
+.counter {
+    font-size: 4rem;
+    font-weight: lighter;
+}
+
+button {    
+    width: 100px;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #cccccc;
+    outline: none;
+    transition: background-color .5s;
+    transition: color .5s;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.increaseBtn {
+
+        //color: #03A9F4;
+
+        &:hover {
+            background-color: #03A9F4;
+            color: #ffffff;
+        }
+    }
+    
+    &.decreaseBtn {
+        
+        //color: rgb(244, 3, 95);
+
+        &:hover {
+            background-color: rgb(244, 3, 95);
+            color: #ffffff;
+        }
+    }
+}
