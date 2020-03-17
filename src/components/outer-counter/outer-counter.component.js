@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import InnerCounter from './../inner-counter/inner-counter.component';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import './outer-counter.scss';
 
@@ -11,17 +12,17 @@ export default class OuterCounter extends Component {
         };
         // Este enlace es necesario para hacer que `this` funcione en el callback
         this.handleClick = this.changeCounter.bind(this);
-      }
-    
-      changeCounter(number) {
+    }
+
+    changeCounter(number) {
         this.setState((state) => ({
-          counter: state.counter + number 
+            counter: state.counter + number 
         }));
-      }
+    }
 
     render() {
         return (
-            <Grid fluid>
+            <Grid fluid className="grid-counter-outer">
                 <Row end="xs">
                     <Col lg={6} md={8} sm={10} xs={12}>
                         <h4 className="counterName">Outer counter</h4>
@@ -29,7 +30,12 @@ export default class OuterCounter extends Component {
                 </Row>
                 <Row center="xs">
                     <Col lg={6} md={8} sm={10} xs={12}>
-                        <h4 className="counter">{this.state.counter}</h4>
+                        <InnerCounter counter={this.state.counter}></InnerCounter>
+                    </Col>
+                </Row>
+                <Row center="xs">
+                    <Col lg={6} md={8} sm={10} xs={12}>
+                        <h4 className="counter-outer">{this.state.counter}</h4>
                     </Col>
                 </Row>
                 <Row center="xs">
