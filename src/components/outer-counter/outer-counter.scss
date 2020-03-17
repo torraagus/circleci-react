@@ -1,31 +1,20 @@
-.counterName {
-    font-weight: lighter;
-    color: #cccccc;
-}
+@import "../styles/mixins/counters";
 
-.counter {
-    font-size: 4rem;
+@include define-counter('outer', 4rem);
+@include define-counter-grid('outer');
+
+.counterName {
     font-weight: lighter;
 }
 
 button {    
-    width: 100px;
-    background-color: #eeeeee;
-    border: 1px solid #cccccc;
-    padding: 1rem;
-    font-weight: bold;
-    font-size: 1rem;
-    color: #cccccc;
-    outline: none;
-    transition: background-color .5s;
-    transition: color .5s;
-
+    
     &:hover {
         cursor: pointer;
     }
 
     &.increaseBtn {
-
+        @include btn-default(100px, 1rem);
         //color: #03A9F4;
 
         &:hover {
@@ -35,7 +24,7 @@ button {
     }
     
     &.decreaseBtn {
-        
+        @include btn-default(100px, 1rem);
         //color: rgb(244, 3, 95);
 
         &:hover {
