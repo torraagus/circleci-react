@@ -18,9 +18,10 @@
     }
 }
 
-@mixin define-counter-grid($inner-or-outer) {
+@mixin define-counter-grid($inner-or-outer, $bgColor) {
     .grid-counter-#{$inner-or-outer} {
         border-bottom: 1px solid #eeeeee;
+        background-color: $bgColor;
     }
 }
 
