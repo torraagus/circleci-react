@@ -11,10 +11,11 @@ export default class OuterCounter extends Component {
             counter: 0
         };
         // Este enlace es necesario para hacer que `this` funcione en el callback
-        this.handleClick = this.changeCounter.bind(this);
+        this.changeCounter = this.changeCounter.bind(this);
     }
 
     changeCounter(number) {
+        console.log(number);
         this.setState((state) => ({
             counter: state.counter + number 
         }));
@@ -30,7 +31,7 @@ export default class OuterCounter extends Component {
                 </Row>
                 <Row center="xs">
                     <Col lg={6} md={8} sm={10} xs={12}>
-                        <InnerCounter counter={this.state.counter}></InnerCounter>
+                        <InnerCounter onCounterChange={this.changeCounter} counter={this.state.counter}></InnerCounter>
                     </Col>
                 </Row>
                 <Row center="xs">

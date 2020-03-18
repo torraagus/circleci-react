@@ -6,17 +6,18 @@ export default class InnerCounter extends Component {
 
     constructor(props) {
         super(props);
-        /*this.state = {
-            counter: 
+        this.state = {
+            counter: props.counter
         };
         // Este enlace es necesario para hacer que `this` funcione en el callback
-        this.handleClick = this.changeCounter.bind(this);*/
+        this.changeCounter = this.changeCounter.bind(this);
     }
 
     changeCounter(number) {
-        /*this.setState((state) => ({
+        this.setState((state) => ({
             counter: state.counter + number 
-        }));*/
+        }));
+        this.props.onCounterChange(number);
     }
 
     render() {
