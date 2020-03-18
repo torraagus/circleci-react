@@ -23,12 +23,12 @@ export default class InnerCounter extends Component {
     render() {
         return (
             <Grid fluid className="grid-counter-inner">
-                <Row end="xs">
+                <Row center="xs">
                     <Col lg={6} md={8} sm={10} xs={12}>
                         <h4 className="counterName">Inner counter</h4>
                     </Col>
                 </Row>
-                <Row center="xs">
+                <Row between="xs">
                     <Col>
                         <button
                             className="increaseBtnSmall"
