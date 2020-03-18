@@ -1,11 +1,12 @@
-@import "../styles/mixins/counters";
+@import "../../styles//mixins/counters";
 
 @include define-counter('inner', 2rem);
 @include define-counter-grid('inner');
+@include define-counter-name('inner', #eeeeee, #444444);
 
 button {        
     &.increaseBtnSmall {
-        @include btn-default(100%, .5rem);
+        @include btn-default(100%);
 
         &:hover {
             background-color: #03A9F4;
@@ -14,7 +15,7 @@ button {
     }
     
     &.decreaseBtnSmall {
-        @include btn-default(100%, .5rem);
+        @include btn-default(100%);
 
         &:hover {
             background-color: rgb(244, 3, 95);
