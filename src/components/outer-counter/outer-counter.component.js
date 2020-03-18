@@ -23,14 +23,14 @@ export default class OuterCounter extends Component {
 
     render() {
         return (
-            <Grid fluid className="grid-counter-outer">
-                <Row end="xs">
-                    <Col lg={6} md={8} sm={10} xs={12}>
-                        <h4 className="counterName">Outer counter</h4>
+            <Grid fluid className="grid-counter-outer pb-3">
+                <Row center="xs">
+                    <Col className="p-0 mb-3" xs={12}>
+                        <h4 className="counterName-outer p-2 mb-0">Outer counter</h4>
                     </Col>
                 </Row>
                 <Row center="xs">
-                    <Col lg={6} md={8} sm={10} xs={12}>
+                    <Col className="p-0" lg={2} md={4} sm={8} xs={12}>
                         <InnerCounter onCounterChange={this.changeCounter} counter={this.state.counter}></InnerCounter>
                     </Col>
                 </Row>
