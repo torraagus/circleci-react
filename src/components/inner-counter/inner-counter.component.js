@@ -25,7 +25,7 @@ export default class InnerCounter extends Component {
             <Grid fluid className="grid-counter-inner">
                 <Row center="xs">
                     <Col className="p-0" xs={12}>
-                        <h4 className="counterName-inner p-2 mb-0">Inner counter</h4>
+                        <h4 className="counterName-inner p-2 mb-0">Inner Counter</h4>
                     </Col>
                 </Row>
                 <Row between="xs">
