@@ -1,16 +1,24 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+require("dotenv").config();
+
+const isDevelopment = process.env.IN_DEV === 'development';
 
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
     output: {
       path: path.resolve(__dirname, 'build'),
-      filename: '[name].js'
+      filename: isDevelopment ? '[name].js' : '[name].[hash].js',
+      chunkFilename: isDevelopment ? '[id].js' : '[id].[hash].js'
     },
     devServer: {
        port: 3000
+    },
+    node: {
+      fs: 'empty'
     },
     module: {
       rules: [
@@ -24,23 +32,6 @@ module.exports = {
             }
           }
         },
-        /*{
-          test: /\.(scss|sass|css)$/,
-          exclude: /node_modules/,
-          loaders: [
-            MiniCssExtractPlugin.loader,
-            {
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                sourceMap: true,
-                importLoaders: 1,
-                localIdentName: '[local]___[hash:base64:5]'
-              }
-            },
-          'sass-loader',
-          ]
-        }*/
         { 
           test: /\.css$/, 
           loader: [
@@ -60,10 +51,18 @@ module.exports = {
     },
     //devtool: 'inline-source-map',
     plugins: [
+        new CopyWebpackPlugin([
+          {
+              from: 'public',
+          },
+        ]),
         new HtmlWebpackPlugin({
           filename: 'index.html',
           template: './src/index.html'
         }),
-        new MiniCSSExtractPlugin()
+        new MiniCSSExtractPlugin({
+          filename: isDevelopment ? '[name].css' : '[name].[hash].css',
+          chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css'
+        })
     ],
   }
