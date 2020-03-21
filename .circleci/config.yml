@@ -11,13 +11,7 @@ jobs:
           steps:
             - run: npm install
             - run: npm test
-  deploy:
-    executor:
-      name: node/default
-    steps:
-      - checkout
-      - node/with-cache:
-          steps:
+            - run: npm run build
             - run: npm run deploy
 workflows:
     build-and-test:
