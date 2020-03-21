@@ -1,4 +1,5 @@
 {
+  "homepage": "https://torraagus.github.io/circleci-react-counter",
   "name": "test_react",
   "version": "1.0.0",
   "description": "",
@@ -25,6 +26,8 @@
     "@testing-library/react": "^10.0.1",
     "@types/jest": "^25.1.4",
     "bootstrap": "^4.4.1",
+    "copy-webpack-plugin": "^5.1.1",
+    "dotenv": "^8.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest-transform-stub": "^2.0.0",
     "node-sass": "^4.13.1",
