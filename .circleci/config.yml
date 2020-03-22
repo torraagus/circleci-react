@@ -8,14 +8,15 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install NPM packages and run tests
+          name: Install NPM packages, run tests and build
           command: |
             npm install
             npm test
+            npm run build
       - persist_to_workspace:
           root: /home/circleci/project
           paths:
-            - "*"
+            - "/build/*"
   deploy:
     docker:
       - image: circleci/node:10
