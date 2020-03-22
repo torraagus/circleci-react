@@ -1,0 +1,32 @@
+@import "../../styles/mixins/_counters";
+@import "../../styles/variables/_colors";
+
+
+@include define-counter('outer', 4rem);
+@include define-counter-grid('outer', #eeeeee);
+@include define-counter-name('outer', #444444, #ffffff);
+
+button {    
+    
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.increaseBtn {
+        @include btn-default(100px);
+
+        &:hover {
+            background-color: $primary-color;
+            color: #ffffff;
+        }
+    }
+    
+    &.decreaseBtn {
+        @include btn-default(100px);
+
+        &:hover {
+            background-color: $secondary-color;
+            color: #ffffff;
+        }
+    }
+}

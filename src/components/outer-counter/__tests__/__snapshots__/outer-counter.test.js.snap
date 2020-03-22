@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="grid-counter-outer pb-3 container-fluid"
+>
+  <div
+    className="row center-xs"
+  >
+    <div
+      className="col-xs-12 p-0 mb-3"
+    >
+      <h4
+        className="counterName-outer p-2 mb-0"
+      >
+        Outer counter
+      </h4>
+    </div>
+  </div>
+  <div
+    className="row center-xs"
+  >
+    <div
+      className="col-lg-2 col-md-4 col-sm-8 col-xs-12 p-0"
+    >
+      <div
+        className="grid-counter-inner container-fluid"
+      >
+        <div
+          className="row center-xs"
+        >
+          <div
+            className="col-xs-12 p-0"
+          >
+            <h4
+              className="counterName-inner p-2 mb-0"
+            >
+              Inner Counter
+            </h4>
+          </div>
+        </div>
+        <div
+          className="row between-xs"
+        >
+          <div
+            className=""
+          >
+            <button
+              className="increaseBtnSmall"
+              onClick={[Function]}
+            >
+              +
+            </button>
+          </div>
+          <div
+            className="counter-inner"
+          >
+            0
+          </div>
+          <div
+            className=""
+          >
+            <button
+              className="decreaseBtnSmall"
+              onClick={[Function]}
+            >
+              -
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="row center-xs"
+  >
+    <div
+      className="col-lg-6 col-md-8 col-sm-10 col-xs-12"
+    >
+      <h4
+        className="counter-outer"
+      >
+        0
+      </h4>
+    </div>
+  </div>
+  <div
+    className="row center-xs"
+  >
+    <div
+      className=""
+    >
+      <button
+        className="increaseBtn"
+        onClick={[Function]}
+      >
+        ADD
+      </button>
+    </div>
+    <div
+      className=""
+    >
+      <button
+        className="decreaseBtn"
+        onClick={[Function]}
+      >
+        REMOVE
+      </button>
+    </div>
+  </div>
+</div>
+`;
