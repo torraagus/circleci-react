@@ -11,6 +11,9 @@ settings.json
 # testing
 /coverage
 
+# github
+/keys
+
 # production
 /build
 .env
