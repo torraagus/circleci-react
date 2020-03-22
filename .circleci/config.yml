@@ -1,10 +1,10 @@
 version: 2.1
-orbs:
-  node: circleci/node@1.1.6
+#orbs:
+#  node: circleci/node@1.1.6
 jobs:
   build:
-    executor:
-      name: node/default
+    docker:
+      - image: circleci/node:10
     steps:
       - checkout
       - run:
@@ -17,8 +17,8 @@ jobs:
         paths:
           - "*"
   deploy:
-    executor:
-      name: node/default
+    docker:
+      - image: circleci/node:10
     steps:
       - checkout
       - attach_workspace:
