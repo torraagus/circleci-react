@@ -8,12 +8,12 @@ jobs:
     steps:
       - checkout
       - run:
-          name: install packages and run tests 
+          name: Install NPM packages and run tests
           command: |
             npm install
             npm test
       - persist_to_workspace:
-          root: public
+          root: build
           paths:
             - "*"
   deploy:
@@ -27,7 +27,7 @@ jobs:
           fingerprints:
             - "a3:64:18:e9:19:7b:18:83:a7:ef:29:ec:ca:b9:a5:59"
       - deploy:
-          name: Deploy website
+          name: Deploy react app
           command: |
             git config --global user.email "torra.agustinignacio@gmail.com"
             git config --global user.name "Torra Agustin"
