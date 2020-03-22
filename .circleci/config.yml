@@ -5,32 +5,33 @@ jobs:
   build:
     executor:
       name: node/default
-      steps:
-        - checkout
-        - run:
-            name: install packages and run tests 
-            command: |
-              npm install
-              npm test
-        - persist_to_workspace:
-          root: public
-          paths:
-            - "*"
+    steps:
+      - checkout
+      - run:
+          name: install packages and run tests 
+          command: |
+            npm install
+            npm test
+      - persist_to_workspace:
+        root: public
+        paths:
+          - "*"
   deploy:
     executor:
       name: node/default
-      steps:
-        - checkout
-        - attach_workspace:
-          at: public
-        - add_ssh_keys:
-            fingerprints:
-              - "a3:64:18:e9:19:7b:18:83:a7:ef:29:ec:ca:b9:a5:59"
-        - deploy:
+    steps:
+      - checkout
+      - attach_workspace:
+        at: public
+      - add_ssh_keys:
+          fingerprints:
+            - "a3:64:18:e9:19:7b:18:83:a7:ef:29:ec:ca:b9:a5:59"
+      - deploy:
           name: Deploy website
           command: |
             git config --global user.email "torra.agustinignacio@gmail.com"
             git config --global user.name "Torra Agustin"
+            npm run deploy
 #            sh deploy.sh
 #  build-and-test:
 #    executor:
