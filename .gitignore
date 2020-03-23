@@ -11,9 +11,13 @@ settings.json
 # testing
 /coverage
 
+# github
+/ssh
+
 # production
 /build
 .env
+/public
 
 # misc
 .DS_Store
