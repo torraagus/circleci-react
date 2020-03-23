@@ -51,11 +51,11 @@ module.exports = {
     },
     //devtool: 'inline-source-map',
     plugins: [
-        /*new CopyWebpackPlugin([
+        new CopyWebpackPlugin([
           {
               from: 'public',
           },
-        ]),*/
+        ]),
         new HtmlWebpackPlugin({
           filename: 'index.html',
           template: './src/index.html'
