@@ -33,31 +33,6 @@ jobs:
             git config --global user.email "torra.agustinignacio@gmail.com"
             git config --global user.name "Torra Agustin"
             npm run deploy
-#            sh deploy.sh
-#  build-and-test:
-#    executor:
-#      name: node/default
-#    steps:
-#      - checkout
-#      - add_ssh_keys:
-#          fingerprints:
-#            - "a3:64:18:e9:19:7b:18:83:a7:ef:29:ec:ca:b9:a5:59"
-#      - node/with-cache:
-#          steps:
-#            - run: npm install
-#            - run: npm test
-#            - run: npm run build
-#            - run: git config --global user.email "torra.agustinignacio@gmail.com"
-#            - run: git config --global user.name "Torra Agustin"
-#            - run: npm run deploy
-# workflows:
-#    build-and-test:
-#      jobs:
-#        - build-and-test:
-#            filters:
-#                branches:
-#                  ignore:
-#                    - gh-pages
 
 workflows:
   version: 2
