@@ -14,8 +14,8 @@ export default class InnerCounter extends Component {
     }
 
     changeCounter(number) {
-        this.setState((state) => ({
-            counter: state.counter + number 
+        this.setState((state, props) => ({
+            counter: state.counter + number
         }));
         this.props.onCounterChange(number);
     }
@@ -31,25 +31,27 @@ export default class InnerCounter extends Component {
                 <Row between="xs">
                     <Col>
                         <button
+                            data-testid="addCount"
                             className="increaseBtnSmall"
                             onClick={() => {
                                 this.changeCounter(1);
                             }}
                             >
-                        {'+'}
+                        +
                         </button>
                     </Col>
                     <Col className="counter-inner">
-                        {this.props.counter}
+                        <p data-testid="count">{this.props.counter}</p>
                     </Col>
                     <Col>
                         <button
+                            data-testid="minusCount"
                             className="decreaseBtnSmall"
                             onClick={() => {
                                 this.changeCounter(-1);
                             }}
                         >
-                        {'-'}
+                        -
                         </button>
                     </Col>
                 </Row>

@@ -25,6 +25,7 @@ exports[`matches snapshot 1`] = `
     >
       <button
         className="increaseBtnSmall"
+        data-testid="addCount"
         onClick={[Function]}
       >
         +
@@ -33,13 +34,18 @@ exports[`matches snapshot 1`] = `
     <div
       className="counter-inner"
     >
-      1
+      <p
+        data-testid="count"
+      >
+        1
+      </p>
     </div>
     <div
       className=""
     >
       <button
         className="decreaseBtnSmall"
+        data-testid="minusCount"
         onClick={[Function]}
       >
         -

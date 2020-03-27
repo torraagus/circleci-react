@@ -1,11 +1,20 @@
 {
   "homepage": "https://torraagus.github.io/circleci-react-counter",
   "name": "test_react",
+  "jest": {
+    "moduleDirectories": [
+      "node_modules",
+      "utils"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|less|scss)$": "identity-obj-proxy"
+    }
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose=true",
     "tests:watch": "jest --watch",
     "tests:coverage": "jest --coverage",
     "start": "npx webpack-dev-server -d --open",
@@ -15,11 +24,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "jest": {
-    "moduleNameMapper": {
-      "^.+\\.(css|less|scss)$": "identity-obj-proxy"
-    }
-  },
   "dependencies": {
     "@babel/core": "^7.8.7",
     "@testing-library/jest-dom": "^5.1.1",
@@ -28,7 +32,6 @@
     "bootstrap": "^4.4.1",
     "copy-webpack-plugin": "^5.1.1",
     "dotenv": "^8.2.0",
-    "identity-obj-proxy": "^3.0.0",
     "jest-transform-stub": "^2.0.0",
     "node-sass": "^4.13.1",
     "path": "^0.12.7",
@@ -45,6 +48,7 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
     "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^25.1.0",
     "mini-css-extract-plugin": "^0.9.0",
     "react-test-renderer": "^16.13.0",
