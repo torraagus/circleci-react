@@ -5,6 +5,8 @@ jobs:
   build:
     docker:
       - image: circleci/node:10
+    environment:
+      COVERALLS_REPO_TOKEN: FEX59tfWv60hrqGfwmneHe7dDKaAbHBYK  
     steps:
       - checkout
       - run:
@@ -42,11 +44,11 @@ workflows:
           filters:
             branches:
               ignore:
-                - master
+#                - master
                 - gh-pages
       - deploy:
           requires:
             - build
           filters:
             branches:
-              only: feature
+              only: master
