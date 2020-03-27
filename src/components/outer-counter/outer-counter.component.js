@@ -15,7 +15,7 @@ export default class OuterCounter extends Component {
     }
 
     changeCounter(number) {
-        console.log(number);
+        console.log("pressed outer buttons");
         this.setState((state) => ({
             counter: state.counter + number 
         }));
@@ -36,7 +36,7 @@ export default class OuterCounter extends Component {
                 </Row>
                 <Row center="xs">
                     <Col lg={6} md={8} sm={10} xs={12}>
-                        <h4 className="counter-outer">{this.state.counter}</h4>
+                        <h4 data-testid="outerCount" className="counter-outer">{this.state.counter}</h4>
                     </Col>
                 </Row>
                 <Row center="xs">

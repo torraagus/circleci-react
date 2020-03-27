@@ -47,6 +47,7 @@ exports[`matches snapshot 1`] = `
           >
             <button
               className="increaseBtnSmall"
+              data-testid="addCount"
               onClick={[Function]}
             >
               +
@@ -55,13 +56,18 @@ exports[`matches snapshot 1`] = `
           <div
             className="counter-inner"
           >
-            0
+            <p
+              data-testid="count"
+            >
+              0
+            </p>
           </div>
           <div
             className=""
           >
             <button
               className="decreaseBtnSmall"
+              data-testid="minusCount"
               onClick={[Function]}
             >
               -
@@ -79,6 +85,7 @@ exports[`matches snapshot 1`] = `
     >
       <h4
         className="counter-outer"
+        data-testid="outerCount"
       >
         0
       </h4>
