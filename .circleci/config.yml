@@ -11,8 +11,6 @@ jobs:
       COVERALLS_REPO_TOKEN: FEX59tfWv60hrqGfwmneHe7dDKaAbHBYK  
     steps:
       - checkout
-      - environment:
-          COVERALLS_REPO_TOKEN: FEX59tfWv60hrqGfwmneHe7dDKaAbHBYK  
       - run:
           environment:
             COVERALLS_REPO_TOKEN: FEX59tfWv60hrqGfwmneHe7dDKaAbHBYK  
