@@ -22,6 +22,7 @@ jobs:
       - run:
           name: Run tests
           command: |
+            npm install
             npm run tests:coverage
   deploy:
     docker:
