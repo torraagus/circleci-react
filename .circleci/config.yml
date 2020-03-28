@@ -50,6 +50,8 @@ workflows:
               ignore:
                 - gh-pages
       - test:
+          requires:
+            - build
           filters:
             branches:
               ignore:
