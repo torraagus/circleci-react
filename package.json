@@ -8,7 +8,9 @@
     ],
     "moduleNameMapper": {
       "^.+\\.(css|less|scss)$": "identity-obj-proxy"
-    }
+    },
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   },
   "version": "1.0.0",
   "description": "",
@@ -16,7 +18,7 @@
   "scripts": {
     "test": "jest --verbose=true",
     "tests:watch": "jest --watch",
-    "tests:coverage": "jest --coverage",
+    "tests:coverage": "jest && codecov",
     "start": "npx webpack-dev-server -d --open",
     "build": "webpack",
     "deploy": "npx gh-pages -d build"
