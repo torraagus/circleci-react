@@ -9,11 +9,15 @@ jobs:
       - image: circleci/node:10
     environment:
       COVERALLS_REPO_TOKEN: FEX59tfWv60hrqGfwmneHe7dDKaAbHBYK  
+      COVERALLS_SERVICE_NAME: circleci
+      COVERALLS_GIT_BRANCH: master
     steps:
       - checkout
       - run:
           environment:
-            COVERALLS_REPO_TOKEN: FEX59tfWv60hrqGfwmneHe7dDKaAbHBYK  
+            COVERALLS_REPO_TOKEN: FEX59tfWv60hrqGfwmneHe7dDKaAbHBYK 
+            COVERALLS_SERVICE_NAME: circleci
+            COVERALLS_GIT_BRANCH: master 
           name: Install NPM packages, run tests and build
           command: |
             npm install
