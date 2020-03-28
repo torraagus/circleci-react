@@ -22,7 +22,7 @@ jobs:
       - run:
           name: Run tests
           command: |
-            npm tests:coverage
+            npm run tests:coverage
   deploy:
     docker:
       - image: circleci/node:10
@@ -57,6 +57,7 @@ workflows:
       - deploy:
           requires:
             - build
+            - test
           filters:
             branches:
               only: master
