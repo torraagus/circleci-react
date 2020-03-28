@@ -1,8 +1,8 @@
 version: 2.1
 #orbs:
 #  node: circleci/node@1.1.6
-orbs:
-  coveralls: coveralls/coveralls@1.0.4
+#orbs:
+#  coveralls: coveralls/coveralls@1.0.4
 jobs:
   build:
     docker:
@@ -21,7 +21,7 @@ jobs:
             npm install
             npm test
             npm run build
-      - coveralls/upload
+#     - coveralls/upload
       - persist_to_workspace:
           root: /home/circleci/project
           paths:
