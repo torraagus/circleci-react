@@ -36,7 +36,7 @@
     "copy-webpack-plugin": "^5.1.1",
     "dotenv": "^8.2.0",
     "jest-transform-stub": "^2.0.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "path": "^0.12.7",
     "react": "^16.13.0",
     "react-bootstrap": "^1.0.0-beta.17",
